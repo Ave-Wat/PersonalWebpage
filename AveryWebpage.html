@@ -1,0 +1,223 @@
+<head>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Spectral:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Spectral', serif;
+      z-index: -1;
+      /*may have to go in and trim some height off of the background image*/
+      background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3cDIC12FgZUsThK8cYxh-r0Svq8LIqGJw8rZP7D-bI5VYTayGgeQhdJN1Dyc8rwDWyg4qf0W6oAVVc9u-TXErarZMcond-dnDMi9BJR1TcUjP76IKQp_p09cuI9p8qMb90CZdaKpJn9aKNBUfZgRNPR=w817-h633-no?authuser=0);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+    }
+
+    /*START NAVBAR*/
+    header {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      padding: 0 5vw 0 5vw;
+      color: white;
+      background-color: black;
+      line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle;
+      justify-content: space-around;
+      z-index: 1;
+    }
+
+    #title-container {
+      float: left;
+      width: 45vw;
+    }
+
+    li {
+      color: white;
+    }
+
+    nav {
+      float: right;
+      width: 50vw;
+      line-height: 55px;
+
+    }
+
+    nav ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin-right: 5vw;
+      align-items: center;
+      vertical-align: middle
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /*END NAVBAR*/
+
+    /*START WELCOME PAGE*/
+    #welcome-section {
+      margin-top: 40vh;
+      height: 80vh;
+      text-align: center;
+      color: rgb(147, 58, 22);
+    }
+
+    /*END WELCOME PAGE*/
+
+    /*START ABOUT/PROJECT SECTIONS*/
+    .page-container {
+      position: relative;
+      margin: 5vh 10vw 5vh 10vw;
+      padding: 1vh 2vw 5vh 2vw;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .page-container h2 {
+      line-height: 1;
+      color: rgb(147, 58, 22);
+    }
+
+    .page-container a {
+      color: black;
+    }
+
+    p {
+      font-family: 'Rubik', sans-serif;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(9vw, 35vw));
+      grid-gap: 2vw;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      margin-bottom: 6rem;
+    }
+
+    .project-tile {
+      border-radius: 2px;
+      background: darkgray;
+      text-align: center;
+      padding: 1vw 1vw 1vw 1vw;
+      margin: 1vh 1vw 1vh 1vw;
+    }
+
+    .project-image {
+      height: calc(100% - 6.8rem);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .project-title {
+      font-size: 2rem;
+      padding: 2rem 0.5rem;
+    }
+
+    /*END ABOUT/PROJECT SECTION*/
+
+    /*START CONTACT SECTION*/
+    #contact {
+      position: absolute;
+      padding: 1vh 2vw 5vh 2vw;
+      left: 0;
+      color: white;
+      background-color: black;
+      width: 100%;
+    }
+
+    #contact a {
+      color: white;
+    }
+
+    /*END CONTACT SECTION*/
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="title-container">
+      <h1>Avery Watts</h1>
+    </div>
+    <div id="nav-container">
+      <nav id="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!--START WELCOME SECTION-->
+    <div id="welcome-section">
+      <h1>Student, Programmer, Runner.</h1>
+    </div>
+    <!--END WELCOME SECTION-->
+
+    <!--START ABOUT SECTION-->
+    <div id="about" class="page-container">
+      <h2>About Me</h2>
+      <p>My name is Avery, and I'm currently studying Computer Science and Political Science at <a href="https://www.carleton.edu/" target="_blank">Carleton College</a>.</p>
+      <p>I have noticed some trends affecting political discourse in America while helping advocate for politicians who I believe will help steer the country in a fair and just direction - without demonizing the other side. There is an extremely important overlap between computer science and politics. The mediums through which the public recieves information about policy and participates in political discourse have shifted to an online format. This online format has led to the rise of rapid misinformation and polarization. Contrary to John Green's prominent computer sticker, this machine no longer kills fascists. This online format leads to separate media worlds in which people spend their digital time. As an aspiring computer programmer, I hope to begin bridging the ideological schism which divides our country. </p>
+      <p>In my free time, I enjoy learning how to code in new ways, running, and playing bass guitar. Currently, I run cross country and track at Carleton College. I ran my first marathon solo this Spring during the COVID-19 shutdown.</p>
+    </div>
+    <!--END ABOUT SECTION-->
+
+    <!--START PROJECTS SECTION-->
+    <div id="projects" class="page-container">
+      <h2>My Projects</h2>
+      <!--for python scraper, take a pic of the UI and graph. For KTC website, take a picture of the website. For java word cloud, take a picture of the wordcloud. For wikipaths, take a picture of code output-->
+      <div class=projects-grid>
+        <div class="project-tile">
+          <a href="https://github.com/Ave-Wat/KnightsTrackClub" target="_blank">
+            <img class="project-image" src="https://lh3.googleusercontent.com/pw/ACtC-3fomr9ogr837iKvcK-cT-h4BE5ml_tvYFEiPVppxXbSUysrYeMoiDynmkZScxkSjouV5Zc8zOkuvANk5XRqcYf_XvdOVZxGVmfh_tPu2vYRs1TciB55F_hr5XBkOqlIGDh8riadbEiqYqsdeFTKLsWH=w1346-h602-no?authuser=0" alt="project">
+            <p>Mock Track Club Website</p>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://github.com/Ave-Wat/WordCloud" target="_blank">
+            <img class="project-image" src="https://lh3.googleusercontent.com/pw/ACtC-3cvyzeeYvd5esTghaF-V0R8JYkjAc1t2uk_o0EN6YpooZP4hlb4aCiVGpnkN2iOn39jKobdHdw3P2HhNUruK-qVkoOO5jEfT3_HQ0zYQVIEUsAQkk2F_eY0lVSAHQKP2PTalbQ_QcImu7LxNAmAJB6Z=w827-h605-no?authuser=0" alt="project" />
+            <p>Word Cloud (Tree ADT)</p>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://github.com/Ave-Wat/Wikipaths" target="_blank">
+            <img class="project-image" src="https://lh3.googleusercontent.com/pw/ACtC-3eGphDUKRBP_przt9RDCOpTOFmOpmuYSIdW3wrjdu75YYQFekVoKu-tarGsAmNX0iksxC3jHkz-Ns3WfkKSMfdEDu_PQxFyv8C5mDNivkZAtSsXIpT_zvmZ0w15mwNyCHkcqiUiwyUlLQlM0gdaMuq2=w1304-h628-no?authuser=0" alt="project" />
+            <p>Wikipaths Graph Traversal</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--END ABOUT SECTION-->
+
+    <!--START CONTACT SECTION-->
+    <footer id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/avery-watts-911226197" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> LinkedIn</a>
+        <a id="profile-link" href="https://github.com/Ave-Wat" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:afisherwatts@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send an email</a>
+        <a href="tel:402-782-1776" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+      </div>
+    </footer>
+    <!--END CONTACT SECTION-->
+
+  </main>
+</body>
+
+
