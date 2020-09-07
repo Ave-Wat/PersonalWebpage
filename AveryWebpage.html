@@ -1,6 +1,7 @@
 <head>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Spectral:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 
   <style>
     body {
@@ -56,7 +57,7 @@
       list-style-type: none;
       margin-right: 5vw;
       align-items: center;
-      vertical-align: middle
+      vertical-align: middle;
     }
 
     nav a {
@@ -114,6 +115,10 @@
       margin: 1vh 1vw 1vh 1vw;
     }
 
+    .project-tile a {
+      text-decoration: none;
+    }
+
     .project-image {
       height: calc(100% - 6rem);
       width: 100%;
@@ -140,8 +145,34 @@
       width: 100%;
     }
 
+    #contact h2 {
+      float: left;
+      width: 40vw;
+      padding-left: 2.5vw;
+    }
+
     #contact a {
       color: white;
+      text-decoration: none;
+    }
+
+    .contact-links ul {
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin-right: 5vw;
+      align-items: center;
+      vertical-align: middle;
+      flex-wrap: wrap;
+    }
+
+    .contact-details {
+      transition: transform 0.3s ease-out;
+    }
+
+    .contact-details:hover {
+      transform: translateY(3px);
     }
 
     /*END CONTACT SECTION*/
@@ -216,10 +247,20 @@
     <footer id="contact">
       <h2>Contact Me</h2>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/in/avery-watts-911226197" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> LinkedIn</a>
-        <a id="profile-link" href="https://github.com/Ave-Wat" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-        <a href="mailto:afisherwatts@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send an email</a>
-        <a href="tel:402-782-1776" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/avery-watts-911226197" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> LinkedIn</a>
+          </li>
+          <li>
+            <a id="profile-link" href="https://github.com/Ave-Wat" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+          </li>
+          <li>
+            <a href="mailto:afisherwatts@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send an email</a>
+          </li>
+          <li>
+            <a href="tel:402-782-1776" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+          </li>
+        </ul>
       </div>
     </footer>
     <!--END CONTACT SECTION-->
