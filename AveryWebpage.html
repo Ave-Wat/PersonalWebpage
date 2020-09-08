@@ -4,16 +4,20 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 
   <style>
+    :root {
+      --main-rust: rgb(147, 58, 22);
+    }
+    
     body {
       font-family: 'Spectral', serif;
       z-index: -1;
       /*may have to go in and trim some height off of the background image*/
-      background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3cDIC12FgZUsThK8cYxh-r0Svq8LIqGJw8rZP7D-bI5VYTayGgeQhdJN1Dyc8rwDWyg4qf0W6oAVVc9u-TXErarZMcond-dnDMi9BJR1TcUjP76IKQp_p09cuI9p8qMb90CZdaKpJn9aKNBUfZgRNPR=w817-h633-no?authuser=0);
+      background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3ffHSS_7IvBcPNqMJ4mKiyQIaJJZk74wyc3BIs6SV3nrJdHwHbCF-Eo9-8kKaCOb2U4HOFjQ-siMz807LiuIwiwGMOuX-BzjYNPLSBhKvTEToDwHFVfBLHvUJz2MVeOlNuQ2luGDc86le2Kl9rH71UA=w896-h633-no?authuser=0);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-
+      overflow-x: hidden;
     }
 
     /*START NAVBAR*/
@@ -56,8 +60,7 @@
       justify-content: space-around;
       list-style-type: none;
       margin-right: 5vw;
-      align-items: center;
-      vertical-align: middle;
+      margin-top: 19px;
     }
 
     nav a {
@@ -72,7 +75,7 @@
       margin-top: 40vh;
       height: 80vh;
       text-align: center;
-      color: rgb(147, 58, 22);
+      color: var(--main-rust);
     }
 
     /*END WELCOME PAGE*/
@@ -80,7 +83,7 @@
     /*START ABOUT/PROJECT SECTIONS*/
     .page-container {
       position: relative;
-      margin: 5vh 10vw 5vh 10vw;
+      margin: 5vh 10vw 10vh 10vw;
       padding: 1vh 2vw 5vh 2vw;
       border-radius: 25px;
       background: rgba(255, 255, 255, 0.6);
@@ -88,7 +91,7 @@
 
     .page-container h2 {
       line-height: 1;
-      color: rgb(147, 58, 22);
+      color: var(--main-rust);
     }
 
     .page-container a {
@@ -110,39 +113,42 @@
 
     .project-tile {
       border-radius: 7px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #696969;
       background: darkgray;
       text-align: center;
       margin: 1vh 1vw 1vh 1vw;
+      transition: transform 0.3s ease-out;
     }
 
     .project-tile a {
       text-decoration: none;
     }
+    
+    .project-tile:hover{
+      transform: translateY(3px);
+    }
 
     .project-image {
-      height: calc(100% - 6rem);
+      height: calc(100% - 3.6rem);
       width: 100%;
       object-fit: cover;
       border-top-left-radius: 7px;
       border-top-right-radius: 7px;
       filter: grayscale(90%);
     }
-
-    .project-title {
-      font-size: 2rem;
-      padding: 2rem 0.5rem;
-    }
-
+    
     /*END ABOUT/PROJECT SECTION*/
 
     /*START CONTACT SECTION*/
     #contact {
       position: absolute;
-      padding: 1vh 2vw 5vh 2vw;
+      width: 100%;
+      padding: 1vh 2vw 1vh 2vw;
       left: 0;
       color: white;
       background-color: black;
-      width: 100%;
     }
 
     #contact h2 {
@@ -162,17 +168,10 @@
       justify-content: space-around;
       list-style-type: none;
       margin-right: 5vw;
+      margin-top: 24px;
       align-items: center;
       vertical-align: middle;
       flex-wrap: wrap;
-    }
-
-    .contact-details {
-      transition: transform 0.3s ease-out;
-    }
-
-    .contact-details:hover {
-      transform: translateY(3px);
     }
 
     /*END CONTACT SECTION*/
@@ -205,7 +204,7 @@
     <div id="about" class="page-container">
       <h2>About Me</h2>
       <p>My name is Avery, and I'm currently studying Computer Science and Political Science at <a href="https://www.carleton.edu/" target="_blank">Carleton College</a>.</p>
-      <p>I have noticed some trends affecting political discourse in America while helping advocate for politicians who I believe will help steer the country in a fair and just direction - without demonizing the other side. There is an extremely important overlap between computer science and politics. The mediums through which the public recieves information about policy and participates in political discourse have shifted to an online format. This online format has led to the rise of rapid misinformation and polarization. Contrary to those prominent computer stickers, this machine no longer kills fascists. This online format leads to separate media worlds in which people spend their digital time. As an aspiring computer programmer, I hope to begin bridging the ideological schism which divides our country. </p>
+      <p>I have noticed some trends affecting political discourse in America while helping advocate for politicians who I believe will help steer the country in a fair and just direction. There is an extremely important overlap between computer science and politics. The mediums through which the public recieves information about policy and participates in political discourse have shifted to an online format. This online format has led to the rise of rapid misinformation and polarization. Contrary to those prominent computer stickers, this machine no longer kills fascists. This online format leads to separate media worlds in which people spend their digital time. As an aspiring computer programmer, I hope to begin bridging the ideological schism which divides our country. </p>
       <p>In my free time, I enjoy learning how to code in new ways, running, and playing bass guitar. Currently, I run cross country and track at Carleton College. I ran my first marathon solo this Spring during the COVID-19 shutdown.</p>
     </div>
     <!--END ABOUT SECTION-->
@@ -213,7 +212,6 @@
     <!--START PROJECTS SECTION-->
     <div id="projects" class="page-container">
       <h2>My Projects</h2>
-      <!--for python scraper, take a pic of the UI and graph. For KTC website, take a picture of the website. For java word cloud, take a picture of the wordcloud. For wikipaths, take a picture of code output-->
       <div class=projects-grid>
         <div class="project-tile">
           <a href="https://github.com/Ave-Wat/KnightsTrackClub" target="_blank">
@@ -249,16 +247,13 @@
       <div class="contact-links">
         <ul>
           <li>
-            <a href="https://www.linkedin.com/in/avery-watts-911226197" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/avery-watts-911226197" target="_blank" class="contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
           </li>
           <li>
-            <a id="profile-link" href="https://github.com/Ave-Wat" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Ave-Wat" target="_blank" id="profile-link" class="contact-details"><i class="fab fa-github"></i> GitHub</a>
           </li>
           <li>
-            <a href="mailto:afisherwatts@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send an email</a>
-          </li>
-          <li>
-            <a href="tel:402-782-1776" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+            <a href="mailto:afisherwatts@gmail.com" class="contact-details"><i class="fas fa-at"></i> Send an email</a>
           </li>
         </ul>
       </div>
