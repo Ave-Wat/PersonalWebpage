@@ -72,7 +72,7 @@ nav a {
 /*START WELCOME PAGE*/
 #welcome-section {
   margin-top: 40vh;
-  height: 80vh;
+  height: calc(100vh - 90px);
   text-align: center;
   color: var(--main-rust);
 }
@@ -82,7 +82,7 @@ nav a {
 /*START ABOUT/PROJECT SECTIONS*/
 .page-container {
   position: relative;
-  margin: 5vh 10vw 10vh 10vw;
+  margin: 0 10vw 10vh 10vw;
   padding: 1vh 2vw 5vh 2vw;
   /*border-radius: 25px;*/
   background: rgba(255, 255, 255, 0.6);
@@ -114,6 +114,7 @@ p {
 .project-tile {
   /*border-radius: 7px;*/
   max-height: 25vh;
+  max-width: 35vh;
   min-width: 300px;
   margin: 1vh auto;
   border-style: solid;
@@ -146,6 +147,23 @@ p {
 
 .project-image-container {
   height: calc(100% - 2.9em);
+}
+
+@media screen and (max-width: 824px){
+  .project-tile{
+    max-height:100%;
+    max-width: 100%;
+    min-width: 0px;
+    width: 100%;
+  }
+
+  .project-image {
+    display: none;
+  }
+
+  .project-image-container {
+    display: none;
+  }
 }
 
 /*END ABOUT/PROJECT SECTION*/
@@ -181,4 +199,8 @@ p {
   align-items: center;
   vertical-align: middle;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px){
+
 }
