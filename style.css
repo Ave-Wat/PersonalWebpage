@@ -6,12 +6,19 @@ body {
   font-family: 'Spectral', serif;
   z-index: -1;
   /*may have to go in and trim some height off of the background image*/
-  background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3ffHSS_7IvBcPNqMJ4mKiyQIaJJZk74wyc3BIs6SV3nrJdHwHbCF-Eo9-8kKaCOb2U4HOFjQ-siMz807LiuIwiwGMOuX-BzjYNPLSBhKvTEToDwHFVfBLHvUJz2MVeOlNuQ2luGDc86le2Kl9rH71UA=w896-h633-no?authuser=0);
+  background-image: url("ave_bass.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   overflow-x: hidden;
+}
+
+.navlink {
+  position:relative;
+  display: block;
+  top: -100px;
+  display: hidden;
 }
 
 /*START NAVBAR*/
@@ -62,8 +69,6 @@ nav a {
   text-decoration: none;
 }
 
-/*END NAVBAR*/
-
 /*START WELCOME PAGE*/
 #welcome-section {
   margin-top: 40vh;
@@ -79,7 +84,7 @@ nav a {
   position: relative;
   margin: 5vh 10vw 10vh 10vw;
   padding: 1vh 2vw 5vh 2vw;
-  border-radius: 25px;
+  /*border-radius: 25px;*/
   background: rgba(255, 255, 255, 0.6);
 }
 
@@ -106,7 +111,7 @@ p {
 }
 
 .project-tile {
-  border-radius: 7px;
+  /*border-radius: 7px;*/
   border-style: solid;
   border-width: 1px;
   border-color: #696969;
@@ -128,8 +133,6 @@ p {
   height: calc(100% - 3.6rem);
   width: 100%;
   object-fit: cover;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
   filter: grayscale(90%);
 }
 
