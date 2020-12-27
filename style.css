@@ -6,7 +6,7 @@ body {
   font-family: 'Spectral', serif;
   z-index: -1;
   /*may have to go in and trim some height off of the background image*/
-  background-image: url("ave_bass.jpg");
+  background-image: url("images/ave_bass.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -107,17 +107,20 @@ p {
   grid-gap: 2vw;
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
 }
 
 .project-tile {
   /*border-radius: 7px;*/
+  max-height: 25vh;
+  min-width: 300px;
+  margin: 1vh auto;
   border-style: solid;
   border-width: 1px;
   border-color: #696969;
   background: darkgray;
   text-align: center;
-  margin: 1vh 1vw 1vh 1vw;
   transition: transform 0.3s ease-out;
 }
 
@@ -125,15 +128,24 @@ p {
   text-decoration: none;
 }
 
+.project-tile p {
+  padding: none;
+  margin: none;
+}
+
 .project-tile:hover{
   transform: translateY(3px);
 }
 
 .project-image {
-  height: calc(100% - 3.6rem);
+  height: 100%;
   width: 100%;
   object-fit: cover;
   filter: grayscale(90%);
+}
+
+.project-image-container {
+  height: calc(100% - 2.9em);
 }
 
 /*END ABOUT/PROJECT SECTION*/
