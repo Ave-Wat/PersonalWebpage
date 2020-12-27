@@ -1,181 +1,11 @@
+<!DOCTYPE html>
+<html>
 <head>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <title>Avery Watts</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Spectral:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-
-  <style>
-    :root {
-      --main-rust: rgb(147, 58, 22);
-    }
-    
-    body {
-      font-family: 'Spectral', serif;
-      z-index: -1;
-      /*may have to go in and trim some height off of the background image*/
-      background-image: url(https://lh3.googleusercontent.com/pw/ACtC-3ffHSS_7IvBcPNqMJ4mKiyQIaJJZk74wyc3BIs6SV3nrJdHwHbCF-Eo9-8kKaCOb2U4HOFjQ-siMz807LiuIwiwGMOuX-BzjYNPLSBhKvTEToDwHFVfBLHvUJz2MVeOlNuQ2luGDc86le2Kl9rH71UA=w896-h633-no?authuser=0);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      overflow-x: hidden;
-    }
-
-    /*START NAVBAR*/
-    header {
-      display: flex;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 90px;
-      padding: 0 5vw 0 5vw;
-      color: white;
-      background-color: black;
-      line-height: 1.5;
-      display: inline-block;
-      vertical-align: middle;
-      justify-content: space-around;
-      z-index: 1;
-    }
-
-    #title-container {
-      float: left;
-      width: 45vw;
-    }
-
-    li {
-      color: white;
-    }
-
-    nav {
-      float: right;
-      width: 50vw;
-      line-height: 55px;
-
-    }
-
-    nav ul {
-      height: 100%;
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      margin-right: 5vw;
-      margin-top: 19px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    /*END NAVBAR*/
-
-    /*START WELCOME PAGE*/
-    #welcome-section {
-      margin-top: 40vh;
-      height: 80vh;
-      text-align: center;
-      color: var(--main-rust);
-    }
-
-    /*END WELCOME PAGE*/
-
-    /*START ABOUT/PROJECT SECTIONS*/
-    .page-container {
-      position: relative;
-      margin: 5vh 10vw 10vh 10vw;
-      padding: 1vh 2vw 5vh 2vw;
-      border-radius: 25px;
-      background: rgba(255, 255, 255, 0.6);
-    }
-
-    .page-container h2 {
-      line-height: 1;
-      color: var(--main-rust);
-    }
-
-    .page-container a {
-      color: black;
-    }
-
-    p {
-      font-family: 'Rubik', sans-serif;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(9vw, 35vw));
-      grid-gap: 2vw;
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    .project-tile {
-      border-radius: 7px;
-      border-style: solid;
-      border-width: 1px;
-      border-color: #696969;
-      background: darkgray;
-      text-align: center;
-      margin: 1vh 1vw 1vh 1vw;
-      transition: transform 0.3s ease-out;
-    }
-
-    .project-tile a {
-      text-decoration: none;
-    }
-    
-    .project-tile:hover{
-      transform: translateY(3px);
-    }
-
-    .project-image {
-      height: calc(100% - 3.6rem);
-      width: 100%;
-      object-fit: cover;
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-      filter: grayscale(90%);
-    }
-    
-    /*END ABOUT/PROJECT SECTION*/
-
-    /*START CONTACT SECTION*/
-    #contact {
-      position: absolute;
-      width: 100%;
-      padding: 1vh 2vw 1vh 2vw;
-      left: 0;
-      color: white;
-      background-color: black;
-    }
-
-    #contact h2 {
-      float: left;
-      width: 40vw;
-      padding-left: 2.5vw;
-    }
-
-    #contact a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .contact-links ul {
-      height: 100%;
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      margin-right: 5vw;
-      margin-top: 24px;
-      align-items: center;
-      vertical-align: middle;
-      flex-wrap: wrap;
-    }
-
-    /*END CONTACT SECTION*/
-  </style>
 </head>
 
 <body>
@@ -198,7 +28,6 @@
     <div id="welcome-section">
       <h1>Student, Programmer, Runner.</h1>
     </div>
-    <!--END WELCOME SECTION-->
 
     <!--START ABOUT SECTION-->
     <div id="about" class="page-container">
@@ -207,7 +36,6 @@
       <p>I have noticed some trends affecting political discourse in America while helping advocate for politicians who I believe will help steer the country in a fair and just direction. There is an extremely important overlap between computer science and politics. The mediums through which the public recieves information about policy and participates in political discourse have shifted to an online format. This online format has led to the rise of rapid misinformation and polarization. Contrary to those prominent computer stickers, this machine no longer kills fascists. This online format leads to separate media worlds in which people spend their digital time. As an aspiring computer programmer, I hope to begin bridging the ideological schism which divides our country. </p>
       <p>In my free time, I enjoy learning how to code in new ways, running, and playing bass guitar. Currently, I run cross country and track at Carleton College. I ran my first marathon solo this Spring during the COVID-19 shutdown.</p>
     </div>
-    <!--END ABOUT SECTION-->
 
     <!--START PROJECTS SECTION-->
     <div id="projects" class="page-container">
@@ -239,7 +67,6 @@
         </div>
       </div>
     </div>
-    <!--END ABOUT SECTION-->
 
     <!--START CONTACT SECTION-->
     <footer id="contact">
@@ -258,7 +85,7 @@
         </ul>
       </div>
     </footer>
-    <!--END CONTACT SECTION-->
 
   </main>
 </body>
+</html>
