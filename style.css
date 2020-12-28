@@ -34,6 +34,10 @@ button:hover {
   display: none;
 }
 
+.widescreen {
+  display: block;
+}
+
 /*START NAVBAR*/
 header {
   display: flex;
@@ -293,5 +297,9 @@ p {
   nav a:active {
     background-color: white;
     border-style: white;
+  }
+
+  .page-container {
+    margin: 0 3vw 10vw 3vw;
   }
 }
