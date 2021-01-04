@@ -1,2 +1,2 @@
 # PersonalWebpage
-I'm currently working on a personal webpage. Still under development.
+This is a personal webpage. It is functional, but still a work in progress.
