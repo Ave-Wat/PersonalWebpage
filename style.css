@@ -12,6 +12,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   overflow-x: hidden;
+  margin: 0;
 }
 
 button {
@@ -44,7 +45,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 90px;
   color: white;
   background-color: black;
@@ -103,7 +104,7 @@ nav a:hover {
 /*END WELCOME PAGE*/
 
 /*START ABOUT/PROJECT SECTIONS*/
-.page-container {
+.content-container {
   position: relative;
   margin: 0 10vw 10vh 10vw;
   padding: 1vh 2vw 5vh 2vw;
@@ -111,12 +112,12 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.page-container h2 {
+.content-container h2 {
   line-height: 1;
   color: var(--main-rust);
 }
 
-.page-container a {
+.content-container a {
   color: black;
 }
 
@@ -128,7 +129,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9vw, 35vw));
   grid-gap: 2vw;
-  width: 100%;
+  width: 74vw;
   max-width: 1280px;
   justify-content: center;
   align-content: center;
@@ -136,9 +137,8 @@ p {
 
 .project-tile {
   /*border-radius: 7px;*/
-  max-height: 25vh;
-  max-width: 35vh;
-  min-width: 300px;
+  height: 25vh;
+  width: 35vh;
   margin: 1vh auto;
   border-style: solid;
   border-width: 1px;
@@ -171,31 +171,12 @@ p {
 .project-image-container {
   height: calc(100% - 2.9em);
 }
-
-/*START OF MOBILE RESPONSE*/
-@media screen and (max-width: 824px){
-  .project-tile{
-    max-height:100%;
-    max-width: 100%;
-    min-width: 0px;
-    width: 100%;
-  }
-
-  .project-image {
-    display: none;
-  }
-
-  .project-image-container {
-    display: none;
-  }
-}
-
 /*END ABOUT/PROJECT SECTION*/
 
 /*START CONTACT SECTION*/
 #contact {
-  position: absolute;
-  width: 100%;
+  display: flex;
+  width: 100vw;
   padding: 1vh 2vw 1vh 2vw;
   left: 0;
   color: white;
@@ -208,17 +189,9 @@ p {
   padding-left: 2.5vw;
 }
 
-#contact a {
-  color: white;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  color: lightgray;
-}
-
 .contact-links ul {
-  height: 100%;
+  width: 60vw;
+  float: right;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -229,10 +202,38 @@ p {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 500px){
-  body{
+#contact a {
+  color: white;
+  text-decoration: none;
+  width: 20vw;
+}
 
+#contact a:hover {
+  color: lightgray;
+}
+
+/*START OF MOBILE RESPONSE*/
+@media screen and (max-width: 824px){
+  .projects-grid{
+    display: block;
+    align-items: center;
   }
+
+  .project-tile{
+    height: auto;
+    padding: 2vw 2vh;
+  }
+
+  .project-image {
+    display: none;
+  }
+
+  .project-image-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
 
   .mobile{
     display: block;
@@ -281,7 +282,7 @@ p {
 
   nav a {
     position: relative;
-    width: 100%;
+    width: 100vw;
     margin-top: 5vh;
     text-align: center;
     border-style: none;
@@ -299,7 +300,29 @@ p {
     border-style: white;
   }
 
-  .page-container {
-    margin: 0 3vw 10vw 3vw;
+  #contact {
+    position: relative;
+    display: block;
+    width: calc(96vw);
+    overflow: hidden;
+  }
+
+  #contact h2 {
+    position: relative;
+    display: block;
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .contact-links ul {
+    float: none;
+    display: block;
+    width: auto;
+  }
+
+  #contact a {
+    float: none;
+    width: auto;
   }
 }
