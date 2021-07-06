@@ -104,12 +104,32 @@ nav a:hover {
 /*END WELCOME PAGE*/
 
 /*START ABOUT/PROJECT SECTIONS*/
+.fade {
+  opacity: 0;
+}
+
 .content-container {
   position: relative;
-  margin: 0 10vw 10vh 10vw;
+  margin: 0 10vw 20vh 10vw;
   padding: 1vh 2vw 5vh 2vw;
   /*border-radius: 25px;*/
   background: rgba(255, 255, 255, 0.6);
+  /*fade in*/
+  -webkit-transform: translateY(50px) rotate(0deg) translateZ(0);
+  transform: translateY(50px) rotate(0deg) translateZ(0);
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition: 1.2s;
+  -o-transition: 1.2s;
+  transition: 3s;
+  opacity: 0;
+}
+
+.inView {
+  opacity: 1;
+  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+  transform: translateY(0px) rotate(0deg) translateZ(0);
 }
 
 .content-container h2 {
@@ -127,29 +147,30 @@ p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9vw, 35vw));
+  grid-template-columns: repeat(auto-fit, minmax(2vw, 35vw));
   grid-gap: 2vw;
-  width: 74vw;
-  max-width: 1280px;
   justify-content: center;
   align-content: center;
 }
 
 .project-tile {
   /*border-radius: 7px;*/
-  height: 25vh;
-  width: 35vh;
-  margin: 1vh auto;
+  height: 35vh;
+  max-width: 30vw;
+  margin: 0 auto;
   border-style: solid;
   border-width: 1px;
   border-color: #696969;
-  background: darkgray;
+  color: white;
+  background: black;
+  opacity: .9;
   text-align: center;
   transition: transform 0.3s ease-out;
 }
 
 .project-tile a {
   text-decoration: none;
+  color: white;
 }
 
 .project-tile p {
@@ -169,14 +190,14 @@ p {
 }
 
 .project-image-container {
-  height: calc(100% - 2.9em);
+  height: calc(100% - 3.3em);
 }
 /*END ABOUT/PROJECT SECTION*/
 
 /*START CONTACT SECTION*/
 #contact {
   display: flex;
-  width: 100vw;
+  
   padding: 1vh 2vw 1vh 2vw;
   left: 0;
   color: white;
