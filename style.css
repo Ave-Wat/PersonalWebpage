@@ -46,10 +46,10 @@ header {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 90px;
+  height: 60px;
   color: white;
   background-color: black;
-  line-height: 1.5;
+  line-height: 1;
   display: inline-block;
   vertical-align: middle;
   justify-content: space-around;
@@ -66,6 +66,11 @@ header {
   padding-left: 5vw;
 }
 
+#title-container h1{
+  line-height: 40px;
+  margin: 10px;
+}
+
 .navlink {
   position:relative;
   display: block;
@@ -76,13 +81,13 @@ header {
 nav {
   float: right;
   width: 50vw;
-  line-height: 55px;
+  line-height: 25px;
 
 }
 
 nav a {
   float: left;
-  line-height: 90px;
+  line-height: 60px;
   text-decoration: none;
   text-align: center;
   color: white;
@@ -110,7 +115,7 @@ nav a:hover {
 
 .content-container {
   position: relative;
-  margin: 0 10vw 20vh 10vw;
+  margin: 0 10vw 30vh 10vw;
   padding: 1vh 2vw 5vh 2vw;
   /*border-radius: 25px;*/
   background: rgba(255, 255, 255, 0.6);
@@ -143,11 +148,12 @@ nav a:hover {
 
 p {
   font-family: 'Rubik', sans-serif;
+  line-height: 2;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2vw, 35vw));
+  grid-template-columns: repeat(auto-fit, minmax(2vw, 20vw));
   grid-gap: 2vw;
   justify-content: center;
   align-content: center;
@@ -174,8 +180,9 @@ p {
 }
 
 .project-tile p {
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
+  line-height: 3.3em;
 }
 
 .project-tile:hover{
@@ -186,7 +193,7 @@ p {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: grayscale(90%);
+  filter: grayscale(70%);
 }
 
 .project-image-container {
