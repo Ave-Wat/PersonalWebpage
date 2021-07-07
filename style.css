@@ -140,6 +140,7 @@ nav a:hover {
 .content-container h2 {
   line-height: 1;
   color: var(--main-rust);
+  text-align: center;
 }
 
 .content-container a {
@@ -161,6 +162,7 @@ p {
   grid-gap: 2vw;
   justify-content: center;
   align-content: center;
+  margin-top: 5vh;
 }
 
 .project-tile {
